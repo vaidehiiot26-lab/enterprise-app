@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center">
+🛒 Shopping Cart
+</h1>
+
+<div id="cartItems"></div>
+
+<h2 id="total" style="text-align:center"></h2>
+
+<div style="text-align:center">
+
+<button onclick="purchase()">
+Purchase Books
+</button>
+
+</div>
+
+<script>
+
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+let html="";
+let total=0;
+
+cart.forEach(book=>{
+
+html += `
+<div class="book">
+
+<img src="${book.image}">
+
+<h3>${book.name}</h3>
+
+<p>₹${book.price}</p>
+
+</div>
+`;
+
+total += book.price;
+
+});
+
+document.getElementById("cartItems").innerHTML =
+html;
+
+document.getElementById("total").innerHTML =
+"Total : ₹" + total;
+
+function purchase(){
+
+alert("Order Successfully Placed!");
+
+localStorage.removeItem("cart");
+
+window.location.href="/";
+
+}
+
+</script>
+
+</body>
+</html>
