@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Book Store</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>📚 Online Book Store</h1>
+
+<input
+type="text"
+id="search"
+placeholder="Search Books"
+>
+
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+</nav>
+
+<div id="cart">
+🛒 Cart (<span id="count">0</span>)
+</div>
+
+</header>
+
+<div class="sidebar">
+
+<h3>Categories</h3>
+
+<button onclick="showBooks('story')">Story</button>
+
+<button onclick="showBooks('romantic')">Romantic</button>
+
+<button onclick="showBooks('science')">Science</button>
+
+<button onclick="showBooks('study')">Study</button>
+
+<button onclick="showBooks('networking')">Networking</button>
+
+<button onclick="showBooks('children')">Children</button>
+
+</div>
+
+<div id="books"></div>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

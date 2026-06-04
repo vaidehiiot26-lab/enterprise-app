@@ -1,66 +1,30 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send(`
-  <html>
-  <head>
-      <title>Enterprise Deployment Dashboard</title>
-      <style>
-      body{
-          font-family:Arial;
-          background:#f5f5f5;
-          text-align:center;
-          padding:50px;
-      }
+app.use(express.static("public"));
 
-      .card{
-          background:white;
-          padding:30px;
-          width:700px;
-          margin:auto;
-          border-radius:10px;
-          box-shadow:0px 0px 10px #ccc;
-      }
-
-      h1{
-          color:#232f3e;
-      }
-
-      .status{
-          color:green;
-          font-size:20px;
-      }
-      </style>
-  </head>
-
-  <body>
-
-  <div class="card">
-
-      <h1>Enterprise Software Deployment Automation</h1>
-
-      <h3>AWS + Docker + GitHub Actions</h3>
-
-      <hr>
-
-      <p class="status">✓ Application Running</p>
-
-      <p>Cloud Platform : AWS EC2</p>
-
-      <p>Container : Docker</p>
-
-      <p>CI/CD Tool : GitHub Actions</p>
-
-      <p>Version : 1.0</p>
-
-  </div>
-
-  </body>
-  </html>
-  `);
+app.get("/", (req,res)=>{
+res.sendFile(path.join(__dirname,"views","index.html"));
 });
 
-app.listen(3000, () => {
-  console.log("Server Running on Port 3000");
+app.get("/login",(req,res)=>{
+res.sendFile(path.join(__dirname,"views","login.html"));
+});
+
+app.get("/register",(req,res)=>{
+res.sendFile(path.join(__dirname,"views","register.html"));
+});
+
+app.get("/about",(req,res)=>{
+res.sendFile(path.join(__dirname,"views","about.html"));
+});
+
+app.get("/contact",(req,res)=>{
+res.sendFile(path.join(__dirname,"views","contact.html"));
+});
+
+app.listen(3000,"0.0.0.0",()=>{
+console.log("Book Store Running on Port 3000");
 });
