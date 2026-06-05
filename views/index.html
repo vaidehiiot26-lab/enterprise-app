@@ -1,9 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Online Book Store</title>
-<link rel="stylesheet" href="/css/style.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f9;
+    }
+
+    /* HEADER */
+    header {
+        background: #1e3a8a;
+        color: white;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    header h2 {
+        margin: 0;
+    }
+
+    #search {
+        padding: 8px;
+        width: 220px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #60a5fa, #1e3a8a);
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        border: none;
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* CATEGORY BUTTONS */
+    .categories {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .categories button {
+        margin: 5px;
+        padding: 10px 15px;
+        border: none;
+        background: #2563eb;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .categories button:hover {
+        background: #1e40af;
+        transform: scale(1.05);
+    }
+
+    /* BOOK GRID */
+    #books {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .book {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .book:hover {
+        transform: translateY(-5px);
+    }
+
+    .book img {
+        width: 100px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+</style>
+
 </head>
 
 <body>
@@ -19,14 +133,12 @@ placeholder="Search Books..."
 onkeyup="searchBooks()">
 
 <nav>
-
-<a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a href="/login">Login</a>
-<a href="/register">Register</a>
-<a href="/cart">🛒 Cart(<span id="count">0</span>)</a>
-
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/cart">🛒 Cart(<span id="count">0</span>)</a>
 </nav>
 
 </header>
@@ -34,7 +146,6 @@ onkeyup="searchBooks()">
 <section class="hero">
 
 <h1>Discover Your Next Favorite Book</h1>
-
 <p>Thousands of books available</p>
 
 <button onclick="showBooks('story')">
@@ -46,15 +157,10 @@ Shop Now
 <section class="categories">
 
 <button onclick="showBooks('story')">Story</button>
-
 <button onclick="showBooks('romantic')">Romantic</button>
-
 <button onclick="showBooks('science')">Science</button>
-
 <button onclick="showBooks('study')">Study</button>
-
 <button onclick="showBooks('networking')">Networking</button>
-
 <button onclick="showBooks('children')">Children</button>
 
 </section>

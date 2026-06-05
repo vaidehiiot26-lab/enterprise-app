@@ -1,30 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>About Us</title>
-<link rel="stylesheet" href="/css/style.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f6ff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-container {
+        max-width: 800px;
+        margin: 60px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    h2 {
+        color: #34495e;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    ul {
+        background: #f8f9ff;
+        padding: 15px 25px;
+        border-radius: 8px;
+    }
+
+    ul li {
+        padding: 5px 0;
+        color: #333;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        background: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: #0056b3;
+    }
+</style>
+
 </head>
 
 <body>
 
-<h1>About Online Book Store</h1>
+<div class="about-container">
 
-<p>
-Welcome to our Online Book Store.
+    <h1>About Online Book Store</h1>
 
-We provide Story, Romantic, Science,
-Study, Networking and Children books.
+    <p>
+        Welcome to our Online Book Store. We provide a wide collection of books
+        including story, romantic, science, study, networking, and children’s books.
+    </p>
 
-This project is built using:
+    <h2>Book Categories</h2>
+    <ul>
+        <li>Story Books</li>
+        <li>Romantic Books</li>
+        <li>Science Books</li>
+        <li>Study Materials</li>
+        <li>Networking Books</li>
+        <li>Children Books</li>
+    </ul>
 
-AWS EC2
-Docker
-Node.js
-GitHub
+    <h2>Technology Used</h2>
+    <ul>
+        <li>AWS EC2</li>
+        <li>Docker</li>
+        <li>Node.js + Express.js</li>
+        <li>GitHub</li>
+    </ul>
 
-</p>
+    <a href="/">← Back To Home</a>
 
-<a href="/">Back To Home</a>
+</div>
 
 </body>
 </html>

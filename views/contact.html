@@ -1,21 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="/css/style.css">
+<title>Contact Us</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e3f2fd, #ffffff);
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-container {
+        max-width: 600px;
+        margin: 80px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    h1 {
+        color: #0d47a1;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #444;
+        margin: 10px 0;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #1e88e5;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 20px;
+        background: #1e88e5;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .back-btn:hover {
+        background: #0d47a1;
+        transform: scale(1.05);
+    }
+
+    .info-box {
+        background: #f1f8ff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+</style>
+
 </head>
 
 <body>
 
-<h1>Contact Us</h1>
+<div class="contact-container">
 
-<p>Email : support@bookstore.com</p>
+    <h1>📞 Contact Us</h1>
 
-<p>Phone : +91 9876543210</p>
+    <div class="info-box">
+        <p><span class="highlight">Email:</span> support@bookstore.com</p>
+        <p><span class="highlight">Phone:</span> +91 9876543210</p>
+        <p><span class="highlight">Address:</span> Nagpur, Maharashtra</p>
+    </div>
 
-<p>Address : Nagpur, Maharashtra</p>
+    <p>We are available 24/7 to help you with your queries related to books, orders, and delivery.</p>
 
-<a href="/">Back To Home</a>
+    <!-- Back Button -->
+    <a class="back-btn" href="/">← Back to Home</a>
+
+</div>
 
 </body>
 </html>
